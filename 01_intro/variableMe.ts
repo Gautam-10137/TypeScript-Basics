@@ -23,5 +23,13 @@ let isLoggedIn: boolean= false;
 
 isLoggedIn.valueOf()   // only boolean methods
 
+// any
+let hero;  // by default it will have any as type 
+function getHero(){
+    return "Spider-Man"
+}
+hero=getHero();
+
+
 
 export {}

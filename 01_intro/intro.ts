@@ -3,5 +3,5 @@ let user={name:"Gautam",age:21};
 
 console.log("Gautam");
 console.log(user.name);
-console.log(user.email);
+// console.log(user.email);     can't access email in user object in typescript but can in js
 export {}
