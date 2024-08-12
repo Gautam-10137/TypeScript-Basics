@@ -69,5 +69,19 @@ ids.map((id):number=>{
     return id
 })
 
+// to define a fn that will never return a value e.g. when we use fn to define error
+
+// function consoleError(msg: string):never{
+//     console.error(msg);  // if we need to console then we have to use void.
+// }
+function consoleError(msg: string):void{
+    console.error(msg);
+}
+
+function handleError(msg: string):never{
+    throw new Error(msg);   // now we can use never , since a function returning 'never' cannot have a reachable end point
+}
+ 
+
 
 export {}
