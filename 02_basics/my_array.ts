@@ -27,5 +27,5 @@ const MLModels: number[][]=[
 
 // there is also a read only array.
 const personalId: ReadonlyArray<string>=[]
-// personalId.push("gautam");  not allowed
+// personalId.push("gautam");  not allowed -> we can't mutate values
 
