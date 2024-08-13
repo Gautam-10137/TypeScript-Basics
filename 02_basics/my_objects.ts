@@ -31,3 +31,52 @@ function createNewUser(user:UserInfo):UserInfo{
     return {name:"",email:"",isPaid:true};
 }
 createNewUser({name:"",email:"",isPaid:true});
+
+// say if we have to make an attribute as readOnly e.g. _id of user as in mongodb
+// and also we want to make an attribute as optional
+type Person={
+    readonly _id:string,
+    name:string,
+    email:string,
+    isActive: boolean,
+    credCardDetails?:string  // this ? will make this attribute as optional e.g. for person that donot have credit card
+}
+
+let myUser:Person={
+    _id:"A01",
+    name:"Gautam",
+    email:"gt@test.com",
+    isActive:true,
+    credCardDetails:"cd01csd344"
+};
+myUser.name="Pahwa"
+// myUser._id="B02"   not allowed since _id is read only
+
+
+let myUser2:Person={
+    _id:"B02",
+    name:"Gt",
+    email:"gt@test.com",
+    isActive:false
+}
+myUser2.email="gt@example.com"
+// Note: In js there is nothing that will tell me that _id is read only
+
+// we can also use existing type to define a new type with combination of existing type
+
+type cardNumber={
+    cardNumber:string
+}
+type cardDate={
+    cardDate:string
+}
+// now we forgot add cvv, but we can combine it with existing type
+type cardDetails= cardNumber & cardDate & {
+    cvv: number
+};
+const card:cardDetails={cardNumber:"ceg42444",cardDate:"24Aug2024",cvv:345};
+
+
+
+
+export {}
