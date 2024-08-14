@@ -71,3 +71,4 @@ seatAllotement="aisle"
 
 // seatAllotement="crew"     :-> not allowed
 
+export {}
