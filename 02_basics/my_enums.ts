@@ -16,5 +16,4 @@ enum SeatChoice{
 const mySeat=SeatChoice.AISLE;
 
 
-
 export {}

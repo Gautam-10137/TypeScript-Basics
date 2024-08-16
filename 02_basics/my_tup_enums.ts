@@ -14,3 +14,5 @@ newUser[1]="gautam"  // can update value
 // newUser[1]=true     it is not allowed
 
 // newUser.push(true)      :-> not allowed
+
+export {}
